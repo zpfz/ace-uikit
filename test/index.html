@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ACE UI framework for Adobe CEP.</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <style>
+    body {
+      /* color: #F0F1F1; */
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <button class="ace-btn">Button</button>
+    <button class="ace-btn" disabled>Button</button>
+    <button class="ace-btn--action">Button</button>
+    <button class="ace-btn--action" disabled>Button</button>
+    <button class="ace-btn--error">Button</button>
+    <button class="ace-btn--error" disabled>Button</button>
+
+
+    <div class="ace-btn-grp">
+      <button class="ace-btn">Button</button>
+      <button class="ace-btn active">Button</button>
+      <button class="ace-btn">Button</button>
+    </div>
+
+    <div class="ace-btn-grp">
+      <button class="ace-btn">Button</button>
+      <button class="ace-btn">Button</button>
+      <button class="ace-btn">Button</button>
+    </div>
+
+    <button class="ace-btn">
+      <img src="./img/icon.png">
+      <span>Photoshop</span>
+    </button>
+
+    <button class="ace-btn" disabled>
+      <img src="./img/icon.png">
+      <span>Photoshop</span>
+    </button>
+
+
+
+    <label class="ace-checkbox">
+      <span class="ace-checkbox-checkmark"></span>
+      <input name="Fruit" type="checkbox" data-style="checkbox">
+      <span class="ace-checkbox-text">科幻</span>
+    </label>
+
+    <label class="ace-checkbox checkbox-disabled">
+      <span class="ace-checkbox-checkmark"></span>
+      <input name="Fruitx" type="checkbox" data-style="checkbox">
+      <span class="ace-checkbox-text">科幻</span>
+    </label>
+
+    <label class="ace-checkbox checkbox-checked">
+      <span class="ace-checkbox-checkmark"></span>
+      <input name="Fruitx" type="checkbox" data-style="checkbox" checked>
+      <span class="ace-checkbox-text">科幻</span>
+    </label>
+
+
+    <label class="ace-checkbox checkbox-checked checkbox-disabled">
+      <span class="ace-checkbox-checkmark"></span>
+      <input name="Fruitx" type="checkbox" data-style="checkbox" checked>
+      <span class="ace-checkbox-text">科幻</span>
+    </label>
+
+
+    <label class="ace-radio">
+      <span class="ace-radio-checkmark"></span>
+      <input name="Fruitx" type="radio" data-style="radio">
+      <span class="ace-radio-text">科幻</span>
+    </label>
+
+    <label class="ace-radio">
+      <span class="ace-radio-checkmark"></span>
+      <input name="Fruitx" type="radio" data-style="radio">
+      <span class="ace-radio-text">科幻</span>
+    </label>
+
+
+    <label class="ace-radio radio-checked radio-disabled">
+      <span class="ace-radio-checkmark"></span>
+      <input name="Fruit" type="radio" data-style="radio" checked>
+      <span class="ace-radio-text">科幻</span>
+    </label>
+
+    <label class="ace-switch">
+      <span class="ace-switch-checkmark"></span>
+      <input name="switch" type="checkbox" data-style="switch" />
+    </label>
+    <label class="ace-switch switch-checked">
+      <span class="ace-switch-checkmark"></span>
+      <input name="switch" type="checkbox" data-style="switch" checked />
+    </label>
+    <label class="ace-switch switch-disabled">
+      <span class="ace-switch-checkmark"></span>
+      <input name="switch" type="checkbox" data-style="switch" checked />
+    </label>
+
+    <div class="ace-card">I am an animator who can program. <span class="ace-badge--blue">VIP</span></div>
+
+    <span class="ace-badge--blue">VIP</span>
+    <span class="ace-badge--green">VIP</span>
+    <span class="ace-badge--gray">VIP</span>
+    <span class="ace-badge--warm">VIP</span>
+    <span class="ace-badge--red">VIP</span>
+
+    <p></p>
+    <div class="ace-notification--info">测试</div>
+    <p></p>
+
+    <div class="ace-notification--success">测试</div>
+    <p></p>
+
+    <div class="ace-notification--warning">测试</div>
+    <p></p>
+
+    <div class="ace-notification--error">测试</div>
+    <p></p>
+
+    <input type="range" class="ace-range">
+    <input type="range" class="ace-range" disabled>
+
+    <input type="text" class="ace-textinput" placeholder="text" value="">
+    <input type="text" class="ace-textinput" placeholder="text" value="" disabled>
+
+    <textarea class="ace-textarea" rows="6" cols="36" placeholder="Textarea"></textarea>
+    <textarea class="ace-textarea" rows="6" cols="36" placeholder="Textarea" disabled></textarea>
+
+    <div class="ace-select">
+      <div class="ace-select-frame">
+        <input type="text" readonly autocomplete="off" placeholder="请选择活动区域" class="ace-input-select">
+        <span class="ace-select-suffix">
+          <i></i>
+        </span>
+      </div>
+      <dl class="ace-select-dropdown">
+        <dt>教学楼</dt>
+        <dd>逸夫教学楼</dd>
+        <dd>厚德教学楼</dd>
+        <dd>学生活动中心</dd>
+        <dt>其他场地</dt>
+        <dd>龙工图书馆</dd>
+        <dd>操场</dd>
+        <dt>其他场地</dt>
+        <dd>龙工图书馆</dd>
+        <dd>操场</dd>
+        <dt>其他场地</dt>
+        <dd>龙工图书馆</dd>
+        <dd>操场</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="ace-select">
+    <div class="ace-select-frame">
+      <input type="text" readonly autocomplete="off" placeholder="请选择活动区域" class="ace-input-select">
+      <span class="ace-select-suffix">
+        <i></i>
+      </span>
+    </div>
+    <dl class="ace-select-dropdown">
+      <dd>逸夫教学楼</dd>
+      <dd>厚德教学楼</dd>
+    </dl>
+  </div>
+  <div class="ace-select select-disabled">
+    <div class="ace-select-frame">
+      <input type="text" readonly autocomplete="off" placeholder="请选择活动区域" class="ace-input-select">
+      <span class="ace-select-suffix">
+        <i></i>
+      </span>
+    </div>
+    <dl class="ace-select-dropdown">
+      <dd>逸夫教学楼</dd>
+      <dd>厚德教学楼</dd>
+    </dl>
+  </div>
+
+</div>
+
+
+
+
+  <script src="./js/jquery.min.js"></script>
+
+  <script src="./js/index.js"></script>
+
+  </div>
+</body>
+
+</html>

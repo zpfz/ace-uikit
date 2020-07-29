@@ -1,0 +1,41 @@
+.ace-card {
+  padding: .625rem;
+  border-radius: 2px;
+  overflow: hidden;
+  line-height: 1.375rem;
+  font-size: 14px;
+}
+
+html{
+  &[data-theme="gray-dark"]{
+    .ace-card {
+      color: var(--gray-dark-text-color);
+      box-shadow: 0 2px 10px -7px var(--gray-dark-box-shadow);
+      background-color: var(--gray-dark-bg-color);
+    }
+  }
+
+  &[data-theme="dark"]{
+    .ace-card {
+      color: var(--dark-text-color);
+      box-shadow: 0 2px 10px -7px var(--dark-box-shadow);
+      background-color: var(--dark-bg-color);
+    }
+  }
+
+  &[data-theme="medium-gray"]{
+    .ace-card {
+      color: var(--medium-gray-text-color);
+      box-shadow: 0 2px 10px -7px var(--medium-gray-box-shadow);
+      background-color: var(--medium-gray-bg-color);
+    }
+  }
+
+  &[data-theme="light"]{
+    .ace-card {
+      color: var(--light-text-color);
+      box-shadow: 0 2px 10px -7px var(--light-box-shadow);
+      background-color: var(--light-bg-color);
+    }
+  }
+}
