@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  'use strict';
-
   // CheckBox
   $("input[data-style='checkbox']").click(function () {
     if ($(this).parent().hasClass('checkbox-checked')) {

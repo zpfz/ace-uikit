@@ -7,7 +7,10 @@ module.exports = {
     ["link",{ rel: "icon",href: "/assets/logo.png" }],
 
     ['meta', { name: 'referrer', content: 'never' }],
-    ['meta', { name: 'keywords', content: 'ace,cep,adobe,ps,ae,ace-ui,ace-uikit,adobe cep' }]
+    ['meta', { name: 'keywords', content: 'ace,cep,adobe,ps,ae,ace-ui,ace-uikit,adobe cep' }],
+    ["link",{ rel: "stylesheet",href: "https://unpkg.com/ace-uikit/dist/ace.min.css" }],
+    ['script', { type: 'text/javascript', src: 'https://cdn.jsdelivr.net/gh/zpfz/ace-uikit@master/test/js/jquery.min.js' }],
+    ['script', { type: 'text/javascript', src: 'https://unpkg.com/ace-uikit/dist/ace.min.js' }]
   ],
   markdown: {
     lineNumbers: false,
@@ -18,6 +21,7 @@ module.exports = {
     },
   },
   themeConfig: {
+    backToTop: true,
     smoothScroll: true,
     sidebarDepth: 0,
     logo: '/assets/logo.png',

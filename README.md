@@ -14,7 +14,7 @@ ACE UI is a customized UI framework for Adobe CEP. It can help you build beautif
 
 ## Docs
 
-📖 [ACE UIKit Cookbook](https://ace-ui.now.sh)
+📖 [ACE UIKit Cookbook](https://ace-ui.vercel.app/)
 
 ## Features
 

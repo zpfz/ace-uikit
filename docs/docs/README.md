@@ -1,8 +1,10 @@
 ---
 home: true
 heroImage: /assets/logo.png
-actionText: Get Started →
+actionText: Quick Start
 actionLink: /guide/
+preactionText: Demo Online
+preactionLink: https://codepen.io/zpfz/pen/dyGBqaE
 features:
 - title: Lightweight
   details: Lightweight UI framework tailored for CEP.

@@ -1,4 +1,7 @@
 gulpfile.js
 yarn.lock
-test/*.*
-docs/*.*
+test/
+docs/
+.eslintrc
+.prettierrc
+src/

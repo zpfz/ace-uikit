@@ -22,7 +22,7 @@ Topcoat is a UI framework designed for multiple platforms (such as Web,Mobile...
 
 Most of the common components of Topcoat are available. But it still lacks some relatively advanced components, such as Select.  
 
-In contrast, ACE has more components, including Badge, Tip in different states, etc. There are currently 13 basic components.  
+In contrast, ACE has more components, including Badge, Tip in different states, etc. There are currently 10+ basic components.  
 
 Topcoat adds three sizes to each component, which is obviously redundant in designing CEP plug-ins, so ACE has done away with multiple sizes in its design. A size between Mini and Regular is used to match the Adobe CEP panel.
 

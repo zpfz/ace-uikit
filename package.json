@@ -1,6 +1,6 @@
 {
   "name": "ace-uikit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Feng L.H.",
   "description": "A lightweight UI framework for Adobe CEP.",
   "main": "./dist/ace.min.js",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/zpfz/ace-uikit.git"
   },
-  "homepage": "https://ace-ui.now.sh",
+  "homepage": "https://ace-ui.vercel.app/",
   "bugs": {
     "url": "https://github.com/zpfz/ace-uikit/issues"
   },
