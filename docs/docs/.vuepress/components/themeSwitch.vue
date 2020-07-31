@@ -6,9 +6,6 @@
       :class="[theme.className, currentIndex == index ? 'actived' : '']"
       @click="themeSwitch(index)"
     ></div>
-    <!-- <div :class="{'theme-switch--gray-dark':true,isActived: false}"  @click="themeSwitch()"></div>
-    <div :class="{'theme-switch--medium-gray':true,isActived: false}" @click="themeSwitch()"></div>
-    <div :class="{'theme-switch--light':true,isActived: false}" @click="themeSwitch()"></div> -->
   </div>
 </template>
 
@@ -27,23 +24,23 @@ export default {
     };
   },
   mounted() {
-    document.getElementsByTagName('html')[0].dataset.theme = 'dark';
+    // document.getElementsByTagName('html')[0].dataset.theme = 'dark';
   },
   methods: {
     themeSwitch(index) {
       this.currentIndex = index;
       switch (index) {
         case 0:
-          document.getElementsByTagName('html')[0].dataset.theme = 'dark';
+          // document.getElementsByTagName('html')[0].dataset.theme = 'dark';
           break;
         case 1:
-          document.getElementsByTagName('html')[0].dataset.theme = 'gray-dark';
+          // document.getElementsByTagName('html')[0].dataset.theme = 'gray-dark';
           break;
         case 2:
-          document.getElementsByTagName('html')[0].dataset.theme = 'medium-gray';
+          // document.getElementsByTagName('html')[0].dataset.theme = 'medium-gray';
           break;
         case 3:
-          document.getElementsByTagName('html')[0].dataset.theme = 'light';
+          // document.getElementsByTagName('html')[0].dataset.theme = 'light';
           break;
       }
     }
