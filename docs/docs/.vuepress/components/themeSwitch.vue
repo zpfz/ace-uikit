@@ -26,10 +26,9 @@ export default {
       currentIndex: 0
     };
   },
-  created() {
+  mounted() {
     document.getElementsByTagName('html')[0].dataset.theme = 'dark';
   },
-  mounted() {},
   methods: {
     themeSwitch(index) {
       this.currentIndex = index;
