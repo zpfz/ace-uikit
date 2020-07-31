@@ -20,11 +20,12 @@ export default {
         { className: 'theme-switch--medium-gray' },
         { className: 'theme-switch--light' }
       ],
-      currentIndex: 0
+      currentIndex: 0,
+      documentDom: null
     };
   },
   mounted() {
-    // document.getElementsByTagName('html')[0].dataset.theme = 'dark';
+    document.getElementsByTagName('html')[0].dataset.theme = 'dark'; 
   },
   methods: {
     themeSwitch(index) {
