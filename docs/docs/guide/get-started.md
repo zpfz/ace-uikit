@@ -9,7 +9,7 @@ title: Getting Started
 ### From Github
 We'll post the package for each update on Github, or you can download it directly from there!
 
-<a-button type="primary" href="https://github.com/zpfz/ace-uikit/releases/new" target="_blank">Download ACE UIKit</a-button>
+<a-button type="primary" href="https://github.com/zpfz/ace-uikit/releases" target="_blank">Download ACE UIKit</a-button>
 
 ### From CDN
 Get the latest version from [unpkg.com/ace-uikit](https://unpkg.com/ace-uikit/) , and import JavaScript and CSS file in your page.
