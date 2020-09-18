@@ -1,0 +1,41 @@
+@import url('../palette.common.less');
+
+.ace-badge {
+
+  &--blue,
+  &--green,
+  &--gray,
+  &--warm,
+  &--red {
+    height: 1.1875rem;
+    padding: 0 .3125rem;
+    line-height: 1.1875rem;
+    border-radius: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: default;
+    color: @badge-font-color;
+  }
+
+  &--blue {
+    background-color: @blue-color;
+  }
+
+  &--green {
+    background-color: @green-color;
+  }
+
+  &--gray {
+    background-color: @gray-color;
+  }
+
+  &--warm {
+    background-color: @warm-color;
+  }
+
+  &--red {
+    background-color: @red-color;
+  }
+}

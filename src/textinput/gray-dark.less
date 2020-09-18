@@ -1,0 +1,13 @@
+@import url('../palette.common.less');
+@import url('../palette.gray.dark.less');
+
+.ace-textinput {
+  border: 1px solid @gray-dark-border-color;
+  background-color: @gray-dark-textinput-bg-color;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
+  color: @gray-dark-text-color;
+
+  &:focus {
+    border: 1px solid @gray-dark-text-border-color-focus;
+  }
+}

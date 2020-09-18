@@ -1,0 +1,50 @@
+.ace-switch {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.25rem;
+  height: 1.25rem;
+  vertical-align: middle;
+
+  .ace-switch-checkmark {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    width: 1.25rem;
+    height: .5rem;
+    outline: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border-color .3s, background-color .3s;
+    vertical-align: middle;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -0.1875rem;
+      left: -0.125rem;
+      border-radius: 100%;
+      transition: all .3s;
+      width: .75rem;
+      height: .75rem;
+    }
+  }
+
+  &.switch-checked {
+    .ace-switch-checkmark {
+      &::after {
+        left: 100%;
+        margin-left: -0.5rem;
+      }
+    }
+  }
+
+  &.switch-disabled {
+    opacity: 0.5;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,21 @@
+input[type="range"] {
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.ace-range {
+  height: 0.215rem;
+  outline: none;
+  -webkit-appearance: none;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 0.6rem;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+  }
+}

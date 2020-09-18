@@ -1,0 +1,31 @@
+@import url('../palette.common.less');
+
+.ace-notification {
+
+  &--info,
+  &--success,
+  &--warning,
+  &--error {
+    padding: 0.15em 0.5em 0.2em;
+    border-radius: 2px;
+    font-size: 14px;
+    color: @notification-font-color;
+  }
+
+  &--info {
+    background-color: @blue-color;
+  }
+
+  &--success {
+    background-color: @green-color;
+  }
+
+  &--warning {
+    background-color: @warm-color;
+  }
+
+  &--error {
+    background-color: @red-color;
+  }
+
+}

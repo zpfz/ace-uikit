@@ -1,0 +1,56 @@
+@import url('../palette.common.less');
+@import url('../palette.gray.dark.less');
+
+.ace-select {
+  background-color: @gray-dark-slt-bg-color;
+  border: 1px solid @gray-dark-border-color;
+
+  .ace-select-frame {
+    input {
+      background-color: @gray-dark-slt-bg-color;
+      color: @gray-dark-text-color;
+    }
+
+    .ace-select-suffix {
+      i {
+        border-color: @gray-dark-text-color;
+      }
+    }
+  }
+
+  .ace-select-dropdown {
+    background-color: @gray-dark-slt-bg-color;
+    border: solid 1px @gray-dark-border-color;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+
+    &::-webkit-scrollbar-track {
+      background: @gray-dark-slt-sb-trk-color;
+    }
+
+    @gray-dark-slt-sb-thm-color: #8c8c8c;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: @gray-dark-slt-sb-thm-color;
+
+      &:hover {
+        background-color: lighten(@gray-dark-slt-sb-thm-color, 8%);
+      }
+    }
+
+    dd {
+      color: @gray-dark-text-color;
+
+      &:hover {
+        background-color: @gray-dark-dd-bg-color-hot;
+      }
+
+      &.actived {
+        background-color: @gray-dark-dd-bg-color-hot;
+      }
+    }
+
+    dt {
+      color: @gray-dark-dt-bg-color;
+    }
+  }
+}

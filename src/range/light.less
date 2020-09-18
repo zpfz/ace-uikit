@@ -1,0 +1,17 @@
+@import url('../palette.common.less');
+@import url('../palette.light.less');
+
+.ace-range {
+  border: 1px solid @light-border-color;
+  background-color: @light-bg-color;
+
+  &::-webkit-slider-thumb {
+    background-color: @light-slrthm-bg-color;
+    border: 1px solid @light-border-color;
+    box-shadow: inset 0 1px @light-slrthm-box-shadow;
+
+    &:hover {
+      background-color: @light-slrthm-bg-color-hover;
+    }
+  }
+}

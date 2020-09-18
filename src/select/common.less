@@ -1,0 +1,125 @@
+.ace-select {
+  position: relative;
+  padding: 0 1.5rem 0 .3125rem;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 14px;
+  height: 1.4rem;
+  outline: none;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100%;
+  cursor: pointer;
+
+  &.select-disabled {
+    opacity: 0.5;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .ace-select-frame {
+    input {
+      outline: none;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+    }
+
+    .ace-select-suffix {
+      position: absolute;
+      height: 100%;
+      right: .5rem;
+      top: 0;
+      text-align: center;
+      pointer-events: none;
+      transition: transform 0.3s;
+      transform: rotateZ(0deg);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &.select-reversed {
+        transform: rotateZ(180deg);
+      }
+
+      i {
+        border-style: solid;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        margin-top: -4px;
+      }
+    }
+  }
+
+  .ace-select-dropdown {
+    position: absolute;
+    left: 0;
+    margin-top: .3125rem;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: .375rem 0;
+    max-height: 16.25rem;
+    overflow-y: auto;
+    transition: all .25s ease;
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+
+    &.dropdown-open {
+      visibility: visible;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 0;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 41.1859%;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      top: 2px;
+      background-clip: padding-box;
+    }
+
+    dd {
+      font-size: 12px;
+      margin: 0;
+      padding: 0 20px;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+
+      &.actived {
+        font-weight: bold;
+      }
+    }
+
+    dt {
+      font-size: 12px;
+      padding: 0 10px;
+      line-height: 1.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: default;
+      user-select: none;
+    }
+  }
+
+}

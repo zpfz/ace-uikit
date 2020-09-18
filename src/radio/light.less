@@ -1,0 +1,21 @@
+@import url('../palette.common.less');
+@import url('../palette.light.less');
+
+.ace-radio {
+  color: @light-text-color;
+
+  .ace-radio-checkmark {
+    background: @light-chkrdo-bg-color;
+    border: 1px solid @light-border-color;
+    box-shadow: inset 0 1px @light-chkrdo-cm-box-shadow;
+
+    &:active {
+      background-color: @light-chkrdo-bg-color-active;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
+    }
+
+    &::after {
+      background-color: @light-checkmark-color;
+    }
+  }
+}

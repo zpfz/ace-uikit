@@ -1,0 +1,56 @@
+@import url('../palette.common.less');
+@import url('../palette.light.less');
+
+.ace-select {
+  background-color: @light-slt-bg-color;
+  border: 1px solid @light-border-color;
+
+  .ace-select-frame {
+    input {
+      background-color: @light-slt-bg-color;
+      color: @light-text-color;
+    }
+
+    .ace-select-suffix {
+      i {
+        border-color: @light-text-color;
+      }
+    }
+  }
+
+  .ace-select-dropdown {
+    background-color: @light-slt-bg-color;
+    border: solid 1px @light-border-color;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+
+    &::-webkit-scrollbar-track {
+      background: @light-slt-sb-trk-color;
+    }
+
+    @light-slt-sb-thm-color: #bdbdbd;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: @light-slt-sb-thm-color;
+
+      &:hover {
+        background-color: lighten(@light-slt-sb-thm-color, 8%);
+      }
+    }
+
+    dd {
+      color: @light-dd-bg-color;
+
+      &:hover {
+        background-color: @light-dd-bg-color-hot;
+      }
+
+      &.actived {
+        background-color: @light-dd-bg-color-hot;
+      }
+    }
+
+    dt {
+      color: @light-dt-bg-color;
+    }
+  }
+}

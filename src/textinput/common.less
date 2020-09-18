@@ -1,0 +1,19 @@
+input[type="text"] {
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+.ace-textinput {
+  line-height: 1.4rem;
+  font-size: 12px;
+  letter-spacing: 0;
+  padding: 0 0.6rem;
+
+  &:focus {
+    outline: none;
+  }
+}

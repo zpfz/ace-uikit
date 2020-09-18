@@ -1,0 +1,21 @@
+@import url('../palette.common.less');
+@import url('../palette.gray.dark.less');
+
+.ace-switch {
+  .ace-switch-checkmark {
+    background: @switch-bg-color;
+    border: 1px solid @switch-border-color;
+
+    &::after {
+      background-color: @switch-round-bg-color;
+      box-shadow: 0 2px 10px -1px @switch-round-box-shadow;
+    }
+  }
+
+  &.switch-checked {
+    .ace-switch-checkmark {
+      border-color: @switch-chk-cm-border-color;
+      background-color: @switch-chk-cm-bg-color;
+    }
+  }
+}
