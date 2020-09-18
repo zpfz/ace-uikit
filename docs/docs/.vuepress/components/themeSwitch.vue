@@ -25,25 +25,33 @@ export default {
     };
   },
   mounted() {
-    document.getElementsByTagName('html')[0].dataset.theme = 'dark'; 
+    this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.dark.css');
   },
   methods: {
     themeSwitch(index) {
       this.currentIndex = index;
       switch (index) {
         case 0:
-          document.getElementsByTagName('html')[0].dataset.theme = 'dark';
+          this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.dark.css');
           break;
         case 1:
-          document.getElementsByTagName('html')[0].dataset.theme = 'gray-dark';
+          this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.gray.dark.css');
           break;
         case 2:
-          document.getElementsByTagName('html')[0].dataset.theme = 'medium-gray';
+          this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.medium.gray.css');
           break;
         case 3:
-          document.getElementsByTagName('html')[0].dataset.theme = 'light';
+          this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.light.css');
           break;
       }
+    },
+    addSheetFile(path){
+      var fileref=document.createElement("link");
+      fileref.rel="stylesheet";
+      fileref.type="text/css";
+      fileref.href= path;
+      var headobj=document.getElementsByTagName('head')[0];
+      headobj.appendChild(fileref);
     }
   }
 };

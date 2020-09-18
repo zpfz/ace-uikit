@@ -3,6 +3,9 @@ title: Components
 sidebarDepth: 2
 ---
 
+
+<template>
+
 # Components
 
 <a-alert type="info" show-icon>
@@ -17,7 +20,7 @@ Commonly used button.
 
 ### Regular Button
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <button class="ace-btn">Button</button>
   <button class="ace-btn" disabled>Button</button>
 </div>
@@ -33,7 +36,7 @@ Commonly used button.
 
 ### Action Button
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <button class="ace-btn--action">Button</button>
   <button class="ace-btn--action" disabled>Button</button>
   <button class="ace-btn--error">Button</button>
@@ -53,7 +56,7 @@ Commonly used button.
 
 ### Icon Button
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <button class="ace-btn">
     <img src="https://s1.ax1x.com/2020/07/30/aM3wMq.png">
     <span>Photoshop</span>
@@ -81,7 +84,7 @@ Commonly used button.
 
 ### Button Group
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <div class="ace-btn-grp">
     <button class="ace-btn">Button</button>
     <button class="ace-btn active">Button</button>
@@ -114,7 +117,7 @@ Commonly used button.
 
 ## CheckBox
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <label class="ace-checkbox">
     <span class="ace-checkbox-checkmark"></span>
     <input name="Fruit" type="checkbox" data-style="checkbox">
@@ -169,7 +172,7 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 
 ## Radio
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <label class="ace-radio">
     <span class="ace-radio-checkmark"></span>
     <input name="Fruitx" type="radio" data-style="radio">
@@ -216,7 +219,7 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 
 ## Switch
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <label class="ace-switch">
     <span class="ace-switch-checkmark"></span>
     <input name="switch" type="checkbox" data-style="switch" />
@@ -257,7 +260,7 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 
 ## Card
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
     <div class="ace-card">A lightweight UI framework for Adobe CEP. </div>
 </div>
 
@@ -271,7 +274,7 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 
 ## Badge
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <span class="ace-badge--blue">VIP</span>
   <span class="ace-badge--green">VIP</span>
   <span class="ace-badge--gray">VIP</span>
@@ -293,7 +296,7 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 
 ## Notification
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <div class="ace-notification--info">A lightweight UI framework for Adobe CEP. </div>
   <p></p>
   <div class="ace-notification--success">A lightweight UI framework for Adobe CEP. </div>
@@ -324,7 +327,7 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 
 ## Range
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <input type="range" class="ace-range">
   <input type="range" class="ace-range" disabled>
 </div>
@@ -340,7 +343,7 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 
 ## Textinput
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <input type="text" class="ace-textinput" placeholder="text" value="">
   <input type="text" class="ace-textinput" placeholder="text" value="" disabled>
 </div>
@@ -356,7 +359,7 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 
 ## Textarea
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
   <textarea class="ace-textarea" rows="6" cols="36" placeholder="Textarea"></textarea>
   <textarea class="ace-textarea" rows="6" cols="36" placeholder="Textarea" disabled></textarea>
 </div>
@@ -383,7 +386,7 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 
 ## Select
 
-<div class="demo-wrap">
+<div class="demo-wrap" :style="{backgroundColor: bgColor}">
  	<div class="ace-select">
 		<div class="ace-select-frame">
 			<input type="text" readonly autocomplete="off" placeholder="Pick a theme please" class="ace-input-select">
@@ -507,4 +510,99 @@ Here the interaction conflicts with the documentation, go to **codepen.io** to s
 :::
 
 
-<themeSwitch />
+<!-- <themeSwitch /> -->
+
+  <div class="theme-switch">
+    <div
+      v-for="(theme, index) in classes"
+      :key="index"
+      :class="[theme.className, currentIndex == index ? 'actived' : '']"
+      @click="themeSwitch(index)"
+    ></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'themeSwitch',
+  data() {
+    return {
+      classes: [
+        { className: 'theme-switch--dark' },
+        { className: 'theme-switch--gray-dark' },
+        { className: 'theme-switch--medium-gray' },
+        { className: 'theme-switch--light' }
+      ],
+      currentIndex: 0,
+      bgColor: '#323232'
+    };
+  },
+  mounted() {
+    this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.dark.css');
+  },
+  methods: {
+    themeSwitch(index) {
+      this.currentIndex = index;
+      switch (index) {
+        case 0:
+          this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.dark.css');
+          this.bgColor = '#323232';
+          break;
+        case 1:
+          this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.gray.dark.css');
+          this.bgColor = '#767676';
+          break;
+        case 2:
+          this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.medium.gray.css');
+          this.bgColor = '#b8b8b8';
+          break;
+        case 3:
+          this.addSheetFile('https://unpkg.com/ace-uikit/dist/ace.light.css');
+          this.bgColor = '#f0f0f0';
+          break;
+      }
+    },
+    addSheetFile(path){
+      var fileref=document.createElement("link");
+      fileref.rel="stylesheet";
+      fileref.type="text/css";
+      fileref.href= path;
+      var headobj=document.getElementsByTagName('head')[0];
+      headobj.appendChild(fileref);
+    }
+  }
+};
+</script>
+<style lang="less" scoped>
+.theme-switch {
+  position: fixed;
+  top: 270px;
+  right: 40px;
+
+  &--dark,
+  &--gray-dark,
+  &--medium-gray,
+  &--light {
+    width: 1.875rem;
+    height: 1.875rem;
+    margin: 3px;
+    border: 3px solid #000;
+
+    &.actived {
+      border: 3px solid #23befa;
+    }
+  }
+  &--dark {
+    background-color: #323232;
+  }
+  &--gray-dark {
+    background-color: #535353;
+  }
+  &--medium-gray {
+    background-color: #b8b8b8;
+  }
+  &--light {
+    background-color: #f0f0f0;
+  }
+}
+</style>

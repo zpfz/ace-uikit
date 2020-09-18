@@ -12,44 +12,34 @@ We'll post the package for each update on Github, or you can download it directl
 <a-button type="primary" href="https://github.com/zpfz/ace-uikit/releases" target="_blank">Download ACE UIKit</a-button>
 
 ### From CDN
-Get the latest version from [unpkg.com/ace-uikit](https://unpkg.com/ace-uikit/) , and import JavaScript and CSS file in your page.
-```html
-<!-- import CSS -->
-<link rel="stylesheet" href="https://unpkg.com/ace-uikit/dist/ace.min.css">
-<!-- import JavaScript -->
-<script src="https://unpkg.com/ace-uikit/dist/ace.min.js"></script>
-```
+Get the latest version from [unpkg.com/ace-uikit](https://unpkg.com/ace-uikit/dist/) , and import JavaScript and CSS file in your page.
 
-### From NPM
-You can also install through package management forms:
+## Get CEP themeSwitcher
+You need to use `themeSwitcher.js` to synchronize CEP themes, and you can download it from [themeSwitcher.js](https://github.com/zpfz/ace-uikit/tree/master/lib)
 
-```bash
-npm i ace-uikit
-```
+
 
 ## Import ACE UIKit
-Since some of the ACE UIKit components rely on jQuery(Version: 1.10.2), please add jQuery before introducing ACE UIKit, then introduce ACE UIKit related resources in your project:
+Since some of the ACE UIKit components rely on jQuery(Version: `1.10.2`), please add jQuery before importing ACE UIKit, then import ACE UIKit related resources in your project:
 
 ```html
-<!-- import CSS -->
-<link rel="stylesheet" href="./ace-uikit/dist/ace.min.css">
 <!-- import JavaScript -->
-<script src="https://cdn.jsdelivr.net/gh/zpfz/ace-uikit@master/test/js/jquery.min.js
-"></script>
-<script src="./ace-uikit/dist/ace.min.js"></script>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<!-- through themeSwitcher.js injection ACE style -->
+<script type="text/javascript" src="./js/themeSwitcher.js"></script>  
+<script type="text/javascript" src="./js/ace.min.js"></script>
 ```
 
-## Switch default theme
-After importing the related resources, we need to switch the theme by setting the `data-theme` attribute of the `<html>` tag, like this:
+## Switch theme
+After importing the related resources, we need to switch the theme from `themeSwitcher.js`, find similar code in `themeSwitcher.js`:
 
-```html
-<html data-theme="gray-dark">
+```js
+addSheetFile("./css/ace.light.css");
+addSheetFile("./css/ace.medium.gray.css");
+addSheetFile("./css/ace.gray.dark.css");
+addSheetFile("./css/ace.dark.css");
 ```
-You can adapt to the four themes of Photoshop through different data-theme values:
-- dark
-- gray-dark
-- medium-gray
-- light
+Then change the path in brackets to the correct path of ACE style library.
 
 ## Start coding
 Now you have implemented ACE UIKit to your project, and it's time to write your code. Please refer to each component's documentation to learn how to use them.

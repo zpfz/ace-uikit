@@ -8,7 +8,6 @@ module.exports = {
 
     ['meta', { name: 'referrer', content: 'never' }],
     ['meta', { name: 'keywords', content: 'ace,cep,adobe,ps,ae,ace-ui,ace-uikit,adobe cep' }],
-    ["link",{ rel: "stylesheet",href: "https://unpkg.com/ace-uikit/dist/ace.min.css" }],
     ['script', { type: 'text/javascript', src: 'https://cdn.jsdelivr.net/gh/zpfz/ace-uikit@master/test/js/jquery.min.js' }],
     ['script', { type: 'text/javascript', src: 'https://unpkg.com/ace-uikit/dist/ace.min.js' }]
   ],
@@ -17,7 +16,7 @@ module.exports = {
   },
   plugins: {
     'sitemap': {
-      hostname: 'https://ace-ui.now.sh'
+      hostname: 'https://ace-ui.vercel.app/'
     },
   },
   themeConfig: {

@@ -5,3 +5,4 @@ docs/
 .eslintrc
 .prettierrc
 src/
+lib/
