@@ -57,6 +57,7 @@ body {
 .ace-btn--action span,
 .ace-btn--error span {
   vertical-align: middle;
+  color: inherit;
 }
 .ace-btn:disabled,
 .ace-btn--action:disabled,
@@ -117,6 +118,7 @@ input[type="checkbox"] {
 }
 .ace-checkbox .ace-checkbox-text {
   vertical-align: middle;
+  color: inherit;
 }
 .ace-checkbox .ace-checkbox-checkmark {
   position: relative;
@@ -192,6 +194,7 @@ input[type="radio"] {
 }
 .ace-radio .ace-radio-text {
   vertical-align: middle;
+  color: inherit;
 }
 .ace-radio .ace-radio-checkmark {
   position: relative;
