@@ -1,6 +1,6 @@
 {
   "name": "ace-uikit",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "author": "Feng L.H.",
   "description": "A lightweight UI framework for Adobe CEP.",
   "main": "./dist/ace.min.js",
